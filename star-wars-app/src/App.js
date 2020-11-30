@@ -2,7 +2,7 @@ import './App.css';
 import Alert from './Alert';
 import React from 'react'
 import logo from './logo.svg';
-import Starwarscharacter from './Starwarspeople';
+import Starwarspeople from './Starwarspeople';
 
 
 
@@ -47,9 +47,8 @@ export default class App extends React.Component {
           <div>
             <h1>Star Wars API Table</h1>
           </div>
-          <Starwarscharacter></Starwarscharacter>
+          <Starwarspeople></Starwarspeople>
         </header>
-        
       </div>
     );
   }

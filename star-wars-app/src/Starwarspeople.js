@@ -1,15 +1,16 @@
 import './App.css';
-import './Starwarspeople.css';
+import './Starwarscharacter.css';
 import React from 'react'
-import * as ReactBootstrap from "react-bootstrap";
+import Starwarscharacter from './Starwarscharacter';
 
-export default class Starwarscharacter extends React.Component {
-    
-    state ={
-        loading:true,
-        characters: null,
-       
-    }
+export default class Starwarspeople extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            loading:true,
+            characters: null
+        }
+      }
 
     
     async componentDidMount(){
@@ -18,56 +19,23 @@ export default class Starwarscharacter extends React.Component {
         const data = await response.json();
         this.setState({loading: false ,characters: data.results})
     }
-    
 
-    
-    renderData(character, index){
-        return (
-            <tr key={index}>
-                <td>{character.name}</td>
-                <td>{character.height}</td>
-                <td>{character.mass}</td>
-                <td>{character.hair_color}</td>
-                <td>{character.eye_color}</td>
-                <td>{character.birth_year}</td>
-                <td>{character.gender}</td>
-            </tr>
-        );
+    render(){
 
-    }
 
-    
-    render() {
-
-        let data = this.state.characters;
-
-        return (
+        return(
+            
             <div>
                 {this.state.loading || !this.state.characters? (
                     <div>loading...</div>
             ):(
-                    <div>
-                        <ReactBootstrap.Table striped bordered hover>
-                            <thead>
-                                <tr>
-                                    <th>Name</th>
-                                    <th>Height</th>
-                                    <th>Mass</th>
-                                    <th>Hair Color</th>
-                                    <th>Eye Color</th>
-                                    <th>Birth Year</th>
-                                    <th>Gender</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {data.map(this.renderData)}    
-                            </tbody>
-                        </ReactBootstrap.Table>
+                   
+                    <div> 
+                        <Starwarscharacter data={this.state.characters} loading = {this.state.loading}></Starwarscharacter>
                     </div>
                 )}
             </div>
+
         );
     }
-
-    
 }
