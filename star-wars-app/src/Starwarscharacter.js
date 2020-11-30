@@ -18,6 +18,7 @@ export default class Starwarscharacter extends React.Component {
                 <td>{character.mass}</td>
                 <td>{character.hair_color}</td>
                 <td>{character.eye_color}</td>
+                <td>{character.skin_color}</td>
                 <td>{character.birth_year}</td>
                 <td>{character.gender}</td>
             </tr>
@@ -44,6 +45,7 @@ export default class Starwarscharacter extends React.Component {
                                     <th>Mass</th>
                                     <th>Hair Color</th>
                                     <th>Eye Color</th>
+                                    <th>Skin Color</th>
                                     <th>Birth Year</th>
                                     <th>Gender</th>
                                 </tr>
