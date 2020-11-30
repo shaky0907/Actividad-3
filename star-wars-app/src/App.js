@@ -2,7 +2,7 @@ import './App.css';
 import Alert from './Alert';
 import React from 'react'
 import logo from './logo.svg';
-import Starwarscharacter from './Starwarscharacter';
+import Starwarscharacter from './Starwarspeople';
 
 
 

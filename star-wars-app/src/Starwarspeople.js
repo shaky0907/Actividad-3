@@ -1,5 +1,5 @@
 import './App.css';
-import './Starwarscharacter.css';
+import './Starwarspeople.css';
 import React from 'react'
 import * as ReactBootstrap from "react-bootstrap";
 
