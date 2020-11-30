@@ -31,32 +31,28 @@ export default class Starwarscharacter extends React.Component {
 
         let data = this.props.data;
         return (
-            <div>
-                {this.props.loading || !data? ( 
-                    <div>loading...</div>
-            ):(
-                   
-                    <div> 
-                        <ReactBootstrap.Table striped bordered hover>
-                            <thead>
-                                <tr>
-                                    <th>Name</th>
-                                    <th>Height</th>
-                                    <th>Mass</th>
-                                    <th>Hair Color</th>
-                                    <th>Eye Color</th>
-                                    <th>Skin Color</th>
-                                    <th>Birth Year</th>
-                                    <th>Gender</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {data.map(this.renderData)}    
-                            </tbody>
-                        </ReactBootstrap.Table>
-                    </div>
-                )}
+                  
+            <div> 
+                <ReactBootstrap.Table striped bordered hover>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Height</th>
+                            <th>Mass</th>
+                            <th>Hair Color</th>
+                            <th>Eye Color</th>
+                            <th>Skin Color</th>
+                            <th>Birth Year</th>
+                            <th>Gender</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {data.map(this.renderData)}    
+                    </tbody>
+                </ReactBootstrap.Table>
             </div>
+              
+            
         );
     }
 

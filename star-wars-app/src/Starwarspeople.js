@@ -10,7 +10,7 @@ export default class Starwarspeople extends React.Component {
             loading:true,
             characters: null
         }
-      }
+    }
 
     
     async componentDidMount(){
@@ -31,7 +31,7 @@ export default class Starwarspeople extends React.Component {
             ):(
                    
                     <div> 
-                        <Starwarscharacter data={this.state.characters} loading = {this.state.loading}></Starwarscharacter>
+                        <Starwarscharacter data={this.state.characters}></Starwarscharacter>
                     </div>
                 )}
             </div>
